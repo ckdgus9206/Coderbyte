@@ -1,0 +1,20 @@
+def LongestWord(sen)
+
+  arr=sen.split
+i=1
+tmp = arr[0]
+
+while arr[i] != nil
+  if tmp.length < arr[i].length
+    tmp = arr[i]
+  end
+  i += 1
+ end
+ 
+  return tmp
+         
+end
+   
+# keep this function call here 
+# to see how to enter arguments in Ruby scroll down   
+LongestWord(STDIN.gets)           

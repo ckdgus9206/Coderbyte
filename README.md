@@ -1,2 +1,0 @@
-# Coderbyte
-CoderByte_Likelion

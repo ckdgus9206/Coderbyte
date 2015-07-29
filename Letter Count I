@@ -1,0 +1,13 @@
+def LetterCountI(str)
+  if  str.split(" ").map { |w| w.count(w.chars.max_by { |e| w.count(e) }) }.pop == 1
+    return -1
+  else
+    
+  return  str.split(" ").max_by { |w| w.count(w.chars.max_by { |e| w.count(e) }) }
+  end
+         
+end
+   
+# keep this function call here 
+# to see how to enter arguments in Ruby scroll down   
+LetterCountI(STDIN.gets)           

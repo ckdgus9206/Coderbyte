@@ -1,0 +1,38 @@
+def MeanMode(arr)
+
+sum=0
+count=0
+
+histogram = arr.inject(Hash.new(0)) { |h, n| h[n] += 1; h }
+modes = nil
+histogram.each_pair do |item, times|
+  modes << item if modes && times == modes[0] and find_all
+  modes = [times, item] if (!modes && times>1) or (modes && times>modes[0])
+end
+mode = modes ? modes[1...modes.size] : modes
+
+if mode == nil
+  freq = 0
+else
+freq = mode.pop
+end
+
+arr.each do |x|
+  sum += x
+  count += 1
+end
+
+mean = sum/count
+
+if freq == mean
+  return 1
+else
+  return 0
+end
+
+         
+end
+   
+# keep this function call here 
+# to see how to enter arguments in Ruby scroll down   
+MeanMode(STDIN.gets)           

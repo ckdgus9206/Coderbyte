@@ -1,0 +1,16 @@
+def WordCount(str)
+
+  i=0
+while str.split(" ")[i] != nil
+
+  i += 1
+
+end
+  
+  return i
+         
+end
+   
+# keep this function call here 
+# to see how to enter arguments in Ruby scroll down   
+WordCount(STDIN.gets)           

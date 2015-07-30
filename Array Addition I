@@ -1,0 +1,24 @@
+def ArrayAdditionI(arr)
+
+max = arr.max
+arr.delete(max)
+com = []
+
+for i in 1..arr.count do
+  com = arr.combination(i).to_a
+  com.delete(max)
+  for x in 0..(com.count-1) do
+    aaa=com[x]
+    if aaa.reduce(:+) == max
+      return true
+   end
+  end
+end
+  
+return false
+         
+end
+   
+# keep this function call here 
+# to see how to enter arguments in Ruby scroll down   
+ArrayAdditionI(STDIN.gets)           
